@@ -1,0 +1,25 @@
+def count_positives_sum_negatives(arr):
+    #your code here
+    count=0
+    sum=0
+    finalArr=[]
+
+    # if you don't use this if condition then test case 6 will be failed!
+
+    if len(arr)>0:
+        for i in range(len(arr)):
+            if arr[i]>0:
+                count=count+1
+            elif arr[i]<0:
+                sum=sum+arr[i]
+
+    #This else condition will be needed so that
+    #if user gives an empty array i can return that empty array
+    #otherwise test case 6 will be failed
+    
+    else:
+        return finalArr
+            
+    finalArr.append(count)
+    finalArr.append(sum)
+    return finalArr
